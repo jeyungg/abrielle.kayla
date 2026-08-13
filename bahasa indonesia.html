@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahasa Indonesia — 6 Materi Utama | Abrielle Kayla Budiman</title>
+    <meta name="description"
+        content="Modul Pembelajaran Bahasa Indonesia Abrielle Kayla Budiman - Sekolah Cinta Kasih Tzu Chi. Meliputi Materi 1 Teks LHO, Materi 2 Teks Biografi, Materi 3 Puisi, Materi 4 Teks Eksposisi, Materi 5 Teks Hikayat, dan Materi 6 Cerpen.">
+
+    <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            200: '#bae0fd',
+                            300: '#7cc8fc',
+                            400: '#38bdf8', /* Bright light blue primary */
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        tzuchi: {
+                            blue: '#0072bc',
+                            light: '#e8f4fc'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #e0effe 0%, #ffffff 50%, #f0f7ff 100%);
+        }
+
+        .tab-btn.active {
+            color: #0284c7;
+            background-color: #e0effe;
+            border-bottom: 3px solid #0284c7;
+            font-weight: 700;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #bae0fd;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #38bdf8;
+        }
+    </style>
+</head>
+
+<body class="text-slate-800 antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Top Announcement Banner -->
+    <div
+        class="bg-gradient-to-r from-brand-600 via-brand-500 to-sky-400 text-white py-2 px-4 text-xs md:text-sm font-medium text-center shadow-sm flex items-center justify-center gap-2 z-50">
+        <span class="bg-white/20 px-2 py-0.5 rounded-full text-[11px] font-semibold tracking-wide uppercase">Website Resmi Sekolah</span>
+        <i class="fa-solid fa-school text-sky-200"></i>
+        <span>SEKOLAH CINTA KASIH TZU CHI — Modul Bahasa Indonesia Abrielle Kayla Budiman</span>
+    </div>
+
+    <!-- TOP NAVIGATION HEADER -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+
+                <!-- Logo & Brand -->
+                <a href="index.html" class="flex items-center gap-3">
+                    <div
+                        class="w-11 h-11 rounded-2xl bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center text-white shadow-md shadow-brand-200 font-extrabold text-xl">
+                        A
+                    </div>
+                    <div>
+                        <span class="text-lg md:text-xl font-bold tracking-tight text-slate-900">
+                            Abrielle
+                        </span>
+                        <p class="text-xs text-brand-600 font-semibold flex items-center gap-1">
+                            <i class="fa-solid fa-heart text-rose-500 text-[10px]"></i> Sekolah Cinta Kasih Tzu Chi
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden md:flex items-center gap-1 bg-slate-100/70 p-1.5 rounded-2xl border border-slate-200/60">
+                    <a href="index.html" id="nav-dashboard"
+                        class="tab-btn px-4 py-2 text-sm font-semibold rounded-xl transition-all duration-200 text-slate-600 hover:text-brand-600 flex items-center gap-2">
+                        <i class="fa-solid fa-chart-pie"></i> Dashboard
+                    </a>
+                    <a href="index.html#profil" id="nav-profil"
+                        class="tab-btn px-4 py-2 text-sm font-semibold rounded-xl transition-all duration-200 text-slate-600 hover:text-brand-600 flex items-center gap-2">
+                        <i class="fa-solid fa-user"></i> Profil
+                    </a>
+                    <a href="informatika.html" target="_blank" id="nav-informatika"
+                        class="tab-btn px-4 py-2 text-sm font-semibold rounded-xl transition-all duration-200 text-slate-600 hover:text-brand-600 flex items-center gap-2">
+                        <i class="fa-solid fa-code"></i> Informatika
+                    </a>
+                    <a href="bahasa indonesia.html" id="nav-bahasa-indonesia"
+                        class="tab-btn active px-4 py-2 text-sm font-semibold rounded-xl transition-all duration-200 text-brand-600 flex items-center gap-2">
+                        <i class="fa-solid fa-book"></i> Bahasa Indonesia
+                    </a>
+                    <a href="jadwal.html" id="nav-jadwal"
+                        class="tab-btn px-4 py-2 text-sm font-semibold rounded-xl transition-all duration-200 text-slate-600 hover:text-brand-600 flex items-center gap-2">
+                        <i class="fa-regular fa-calendar-days"></i> Jadwal Pelajaran
+                    </a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <a href="index.html"
+                        class="px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs rounded-xl shadow-md transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-arrow-left"></i> Dashboard
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center gap-2">
+                    <button onclick="toggleMobileMenu()"
+                        class="w-10 h-10 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center hover:bg-brand-50 hover:text-brand-600 transition-colors">
+                        <i class="fa-solid fa-bars text-lg" id="mobile-menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-2">
+            <a href="index.html"
+                class="w-full text-left px-4 py-3 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 flex items-center gap-3">
+                <i class="fa-solid fa-chart-pie w-5 text-brand-500"></i> Dashboard
+            </a>
+            <a href="index.html#profil"
+                class="w-full text-left px-4 py-3 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 flex items-center gap-3">
+                <i class="fa-solid fa-user w-5 text-brand-500"></i> Profil
+            </a>
+            <a href="informatika.html" target="_blank"
+                class="w-full text-left px-4 py-3 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 flex items-center gap-3">
+                <i class="fa-solid fa-code w-5 text-brand-500"></i> Informatika
+            </a>
+            <a href="bahasa indonesia.html"
+                class="w-full text-left px-4 py-3 rounded-xl font-bold bg-brand-50 text-brand-600 flex items-center gap-3">
+                <i class="fa-solid fa-book w-5 text-brand-500"></i> Bahasa Indonesia
+            </a>
+            <a href="jadwal.html"
+                class="w-full text-left px-4 py-3 rounded-xl font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-600 flex items-center gap-3">
+                <i class="fa-regular fa-calendar-days w-5 text-brand-500"></i> Jadwal Pelajaran
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="flex-1 min-w-0 z-10 py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full space-y-8">
+
+        <!-- HERO BANNER -->
+        <section
+            class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-sky-400 via-brand-500 to-brand-700 text-white p-8 md:p-12 shadow-xl shadow-brand-100 space-y-6">
+            <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
+            <div class="absolute right-20 top-0 w-40 h-40 bg-sky-200/20 rounded-full blur-xl pointer-events-none"></div>
+
+            <div class="relative z-10 space-y-4">
+                <div
+                    class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide">
+                    <i class="fa-solid fa-book-open text-yellow-300"></i>
+                    <span>Modul Sastra & Bahasa Indonesia</span>
+                </div>
+                <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">
+                    Kumpulan 6 Materi Utama Bahasa Indonesia
+                </h1>
+                <p class="text-sky-50 text-sm md:text-base max-w-3xl font-light leading-relaxed">
+                    Halaman portofolio pembelajaran Bahasa Indonesia karya <span class="font-semibold text-white">Abrielle Kayla Budiman</span> di Sekolah Cinta Kasih Tzu Chi. Berisi 6 materi utama: Teks LHO, Teks Biografi, Puisi, Teks Eksposisi, Teks Hikayat, dan Cerpen.
+                </p>
+            </div>
+
+            <!-- Search Bar & Topic Filter Chips -->
+            <div class="relative z-10 pt-2 space-y-4">
+                <div class="relative max-w-xl">
+                    <input type="text" id="materi-search-input" onkeyup="filterMateriCards()"
+                        placeholder="Cari materi (LHO, Biografi, Puisi, Eksposisi, Hikayat, Cerpen)..."
+                        class="w-full pl-11 pr-4 py-3.5 rounded-2xl bg-white text-slate-800 placeholder-slate-400 text-xs md:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-brand-300 shadow-md">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-4 text-slate-400 text-sm"></i>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-2 text-xs">
+                    <span class="font-bold text-sky-100 mr-1">Filter Materi:</span>
+                    <button onclick="quickFilterMateri('all')"
+                        class="materi-chip active px-3.5 py-1.5 rounded-full bg-white text-brand-700 font-bold shadow-sm hover:bg-sky-50 transition-all cursor-pointer">
+                        Semua (6 Materi)
+                    </button>
+                    <button onclick="quickFilterMateri('LHO')"
+                        class="materi-chip px-3.5 py-1.5 rounded-full bg-white/20 hover:bg-white/30 text-white font-semibold transition-all cursor-pointer">
+                        🔍 Materi 1: LHO
+                    </button>
+                    <button onclick="quickFilterMateri('Biografi')"
+                        class="materi-chip px-3.5 py-1.5 rounded-full bg-white/20 hover:bg-white/30 text-white font-semibold transition-all cursor-pointer">
+                        👤 Materi 2: Biografi
+                    </button>
+                    <button onclick="quickFilterMateri('Puisi')"
+                        class="materi-chip px-3.5 py-1.5 rounded-full bg-white/20 hover:bg-white/30 text-white font-semibold transition-all cursor-pointer">
+                        ✍️ Materi 3: Puisi
+                    </button>
+                    <button onclick="quickFilterMateri('Eksposisi')"
+                        class="materi-chip px-3.5 py-1.5 rounded-full bg-white/20 hover:bg-white/30 text-white font-semibold transition-all cursor-pointer">
+                        💡 Materi 4: Eksposisi
+                    </button>
+                    <button onclick="quickFilterMateri('Hikayat')"
+                        class="materi-chip px-3.5 py-1.5 rounded-full bg-white/20 hover:bg-white/30 text-white font-semibold transition-all cursor-pointer">
+                        📜 Materi 5: Hikayat
+                    </button>
+                    <button onclick="quickFilterMateri('Cerpen')"
+                        class="materi-chip px-3.5 py-1.5 rounded-full bg-white/20 hover:bg-white/30 text-white font-semibold transition-all cursor-pointer">
+                        📖 Materi 6: Cerpen
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CARDS GRID CONTAINER (6 MATERI) -->
+        <section id="materi-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- MATERI 1: TEKS LHO -->
+            <article class="materi-card glass-card rounded-3xl p-6 border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between space-y-4" data-category="LHO">
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-50 text-brand-700 border border-brand-200">
+                            Materi 1 — Teks LHO
+                        </span>
+                        <span class="text-xs text-slate-400 font-medium">Observasi</span>
+                    </div>
+
+                    <h2 class="text-xl font-bold text-slate-900 leading-snug">
+                        Teks Laporan Hasil Observasi (LHO)
+                    </h2>
+
+                    <p class="text-xs text-slate-600 leading-relaxed font-normal">
+                        Pengertian, struktur umum (Definisi Umum, Deskripsi Bagian, Deskripsi Manfaat), serta analisis faktual hasil pengamatan langsung di lapangan.
+                    </p>
+                </div>
+
+                <div class="pt-4 border-t border-slate-100 space-y-3">
+                    <div class="bg-brand-50/60 p-3 rounded-2xl text-[11px] text-slate-600 space-y-1 border border-brand-100">
+                        <div class="font-bold text-slate-800 flex items-center gap-1.5">
+                            <i class="fa-solid fa-file-lines text-brand-600"></i> Fokus Studi:
+                        </div>
+                        <p>Pengamatan Budaya Kebersihan & Daur Ulang Sekolah Cinta Kasih Tzu Chi.</p>
+                    </div>
+
+                    <button onclick="openMateriModal(1)"
+                        class="w-full py-2.5 px-4 bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs rounded-xl shadow-md transition-colors flex items-center justify-center gap-2">
+                        <span>Baca Selengkapnya</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </article>
+
+            <!-- MATERI 2: TEKS BIOGRAFI -->
+            <article class="materi-card glass-card rounded-3xl p-6 border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between space-y-4" data-category="Biografi">
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-50 text-brand-700 border border-brand-200">
+                            Materi 2 — Teks Biografi
+                        </span>
+                        <span class="text-xs text-slate-400 font-medium">Tokoh Inspiratif</span>
+                    </div>
+
+                    <h2 class="text-xl font-bold text-slate-900 leading-snug">
+                        Teks Biografi Tokoh
+                    </h2>
+
+                    <p class="text-xs text-slate-600 leading-relaxed font-normal">
+                        Kisah perjalanan hidup, pengalaman menaklukkan tantangan, struktur (Orientasi, Peristiwa Penting, Reorientasi), dan nilai keteladanan tokoh.
+                    </p>
+                </div>
+
+                <div class="pt-4 border-t border-slate-100 space-y-3">
+                    <div class="bg-brand-50/60 p-3 rounded-2xl text-[11px] text-slate-600 space-y-1 border border-brand-100">
+                        <div class="font-bold text-slate-800 flex items-center gap-1.5">
+                            <i class="fa-solid fa-user-graduate text-brand-600"></i> Tokoh Analisis:
+                        </div>
+                        <p>Biografi Inspiratif Master Cheng Yen & Tokoh Sastra Nasional Indonesia.</p>
+                    </div>
+
+                    <button onclick="openMateriModal(2)"
+                        class="w-full py-2.5 px-4 bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs rounded-xl shadow-md transition-colors flex items-center justify-center gap-2">
+                        <span>Baca Selengkapnya</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </article>
+
+            <!-- MATERI 3: PUISI -->
+            <article class="materi-card glass-card rounded-3xl p-6 border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between space-y-4" data-category="Puisi">
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-50 text-brand-700 border border-brand-200">
+                            Materi 3 — Puisi
+                        </span>
+                        <span class="text-xs text-slate-400 font-medium">Sastra & Estetika</span>
+                    </div>
+
+                    <h2 class="text-xl font-bold text-slate-900 leading-snug">
+                        Puisi & Antologi Karya Sastra
+                    </h2>
+
+                    <p class="text-xs text-slate-600 leading-relaxed font-normal">
+                        Unsur batin (tema, nada, amanat), unsur fisik (diksi, majas, rima, tipografi), serta antologi puisi original bertema cinta kasih dan kemanusiaan.
+                    </p>
+                </div>
+
+                <div class="pt-4 border-t border-slate-100 space-y-3">
+                    <div class="bg-brand-50/60 p-3 rounded-2xl text-[11px] text-slate-600 space-y-1 border border-brand-100">
+                        <div class="font-bold text-slate-800 flex items-center gap-1.5">
+                            <i class="fa-solid fa-pen-nib text-brand-600"></i> Karya Original:
+                        </div>
+                        <p>Antologi Puisi *"Jejak Langkah Cinta Kasih"* karya Abrielle Kayla Budiman.</p>
+                    </div>
+
+                    <button onclick="openMateriModal(3)"
+                        class="w-full py-2.5 px-4 bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs rounded-xl shadow-md transition-colors flex items-center justify-center gap-2">
+                        <span>Baca Selengkapnya</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </article>
+
+            <!-- MATERI 4: TEKS EKSPOSISI -->
+            <article class="materi-card glass-card rounded-3xl p-6 border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between space-y-4" data-category="Eksposisi">
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-50 text-brand-700 border border-brand-200">
+                            Materi 4 — Teks Eksposisi
+                        </span>
+                        <span class="text-xs text-slate-400 font-medium">Argumentasi</span>
+                    </div>
+
+                    <h2 class="text-xl font-bold text-slate-900 leading-snug">
+                        Teks Eksposisi
+                    </h2>
+
+                    <p class="text-xs text-slate-600 leading-relaxed font-normal">
+                        Menyampaikan gagasannya secara jelas dan logis melalui Tesis, Argumen pendukung faktual, dan Penegasan Ulang ringkasan simpulan.
+                    </p>
+                </div>
+
+                <div class="pt-4 border-t border-slate-100 space-y-3">
+                    <div class="bg-brand-50/60 p-3 rounded-2xl text-[11px] text-slate-600 space-y-1 border border-brand-100">
+                        <div class="font-bold text-slate-800 flex items-center gap-1.5">
+                            <i class="fa-solid fa-lightbulb text-brand-600"></i> Topik Eksposisi:
+                        </div>
+                        <p>Pentingnya Pendidikan Karakter dan Budaya Humanis di Era Digital.</p>
+                    </div>
+
+                    <button onclick="openMateriModal(4)"
+                        class="w-full py-2.5 px-4 bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs rounded-xl shadow-md transition-colors flex items-center justify-center gap-2">
+                        <span>Baca Selengkapnya</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </article>
+
+            <!-- MATERI 5: TEKS HIKAYAT -->
+            <article class="materi-card glass-card rounded-3xl p-6 border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between space-y-4" data-category="Hikayat">
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-50 text-brand-700 border border-brand-200">
+                            Materi 5 — Teks Hikayat
+                        </span>
+                        <span class="text-xs text-slate-400 font-medium">Klasik & Arkaik</span>
+                    </div>
+
+                    <h2 class="text-xl font-bold text-slate-900 leading-snug">
+                        Teks Hikayat (Sastra Melayu Klasik)
+                    </h2>
+
+                    <p class="text-xs text-slate-600 leading-relaxed font-normal">
+                        Karya sastra Melayu klasik yang kaya akan keajaiban, kata arkaik (alkisah, syahdan, hatta), kepahlawanan, serta nilai-nilai moral kehidupan.
+                    </p>
+                </div>
+
+                <div class="pt-4 border-t border-slate-100 space-y-3">
+                    <div class="bg-brand-50/60 p-3 rounded-2xl text-[11px] text-slate-600 space-y-1 border border-brand-100">
+                        <div class="font-bold text-slate-800 flex items-center gap-1.5">
+                            <i class="fa-solid fa-scroll text-brand-600"></i> Analisis Hikayat:
+                        </div>
+                        <p>Analisis Nilai Kebajikan & Kata Arkaik dalam *"Hikayat Hang Tuah"*.</p>
+                    </div>
+
+                    <button onclick="openMateriModal(5)"
+                        class="w-full py-2.5 px-4 bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs rounded-xl shadow-md transition-colors flex items-center justify-center gap-2">
+                        <span>Baca Selengkapnya</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </article>
+
+            <!-- MATERI 6: CERPEN -->
+            <article class="materi-card glass-card rounded-3xl p-6 border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between space-y-4" data-category="Cerpen">
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-50 text-brand-700 border border-brand-200">
+                            Materi 6 — Cerpen
+                        </span>
+                        <span class="text-xs text-slate-400 font-medium">Fiksi Prosa</span>
+                    </div>
+
+                    <h2 class="text-xl font-bold text-slate-900 leading-snug">
+                        Cerpen (Cerita Pendek)
+                    </h2>
+
+                    <p class="text-xs text-slate-600 leading-relaxed font-normal">
+                        Pengusaan unsur intrinsik (Tema, Tokoh, Alur, Latar, Sudut Pandang, Amanat) dan struktur naratif cerpen (Orientasi hingga Resolusi).
+                    </p>
+                </div>
+
+                <div class="pt-4 border-t border-slate-100 space-y-3">
+                    <div class="bg-brand-50/60 p-3 rounded-2xl text-[11px] text-slate-600 space-y-1 border border-brand-100">
+                        <div class="font-bold text-slate-800 flex items-center gap-1.5">
+                            <i class="fa-solid fa-book-open-reader text-brand-600"></i> Cerpen Original:
+                        </div>
+                        <p>*"Lentera di Ujung Senja Tzu Chi"* karya Abrielle Kayla Budiman.</p>
+                    </div>
+
+                    <button onclick="openMateriModal(6)"
+                        class="w-full py-2.5 px-4 bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs rounded-xl shadow-md transition-colors flex items-center justify-center gap-2">
+                        <span>Baca Selengkapnya</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- MODAL POPUP FOR DETAILED MATERI READING -->
+    <div id="materi-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-3xl w-full p-6 md:p-8 shadow-2xl space-y-6 max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                <div class="flex items-center gap-2">
+                    <span id="modal-badge" class="px-3.5 py-1 rounded-full text-xs font-extrabold bg-brand-50 text-brand-700 border border-brand-200">
+                        Materi
+                    </span>
+                    <span class="text-xs font-semibold text-slate-400">Modul Bahasa Indonesia</span>
+                </div>
+                <button onclick="closeMateriModal()" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-xmark text-base"></i>
+                </button>
+            </div>
+
+            <div class="space-y-2">
+                <h2 id="modal-title" class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight">Judul Materi</h2>
+                <div class="flex items-center gap-4 text-xs text-slate-500 font-medium">
+                    <span><i class="fa-solid fa-user text-brand-500"></i> Abrielle Kayla Budiman</span>
+                    <span>•</span>
+                    <span><i class="fa-solid fa-school text-brand-500"></i> Sekolah Cinta Kasih Tzu Chi</span>
+                </div>
+            </div>
+
+            <!-- Content Area inside Modal -->
+            <div id="modal-content" class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-xs md:text-sm text-slate-700 leading-relaxed space-y-4 font-normal">
+                <!-- Inserted dynamically via JavaScript -->
+            </div>
+
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                <span class="text-xs text-emerald-600 font-bold flex items-center gap-1.5">
+                    <i class="fa-solid fa-circle-check"></i> Modul Pembelajaran Resmi
+                </span>
+                <button onclick="closeMateriModal()" class="bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold px-6 py-2.5 rounded-xl transition-colors shadow-md">
+                    Tutup Modul
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-10 mt-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <div class="flex items-center justify-center gap-2">
+                <div class="w-8 h-8 rounded-xl bg-brand-500 text-white font-bold flex items-center justify-center text-sm shadow-md">
+                    A
+                </div>
+                <span class="text-white font-bold text-lg">Abrielle Kayla Budiman</span>
+            </div>
+            <p class="text-xs max-w-md mx-auto text-slate-400">
+                Portofolio Digital Pembelajaran Bahasa Indonesia — Sekolah Cinta Kasih Tzu Chi Cengkareng.
+            </p>
+            <div class="pt-4 border-t border-slate-800 text-[11px] text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-2">
+                <span>© 2026 Abrielle Kayla Budiman. All rights reserved.</span>
+                <span class="text-brand-400">SMA Cinta Kasih Tzu Chi — Kelas XI.3</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('mobile-menu-icon');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        }
+
+        const materiData = {
+            1: {
+                badge: 'Materi 1 — Teks LHO',
+                title: 'MATERI 1: TEKS LAPORAN HASIL OBSERVASI (LHO)',
+                content: `
+                    <div class="space-y-4">
+                        <div class="p-4 bg-brand-50 rounded-xl border border-brand-200 text-brand-900">
+                            <h4 class="font-bold text-base mb-1">I. Hakikat & Tujuan Teks Laporan Hasil Observasi</h4>
+                            <p>Teks Laporan Hasil Observasi (LHO) adalah teks non-fiksi ilmiah yang menyajikan informasi secara faktual, objektif, dan sistematis berdasarkan hasil pengamatan langsung di lapangan. Teks LHO bertujuan untuk memberikan wawasan berbasis data empiris tanpa adanya opini pribadi atau penilaian subjektif penulis.</p>
+                        </div>
+
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-slate-900 text-sm">II. Struktur Utama Teks LHO</h4>
+                            <ul class="list-disc pl-5 space-y-2 text-xs text-slate-700">
+                                <li><strong>1. Pernyataan Umum / Definisi Umum:</strong> Berisi pembukaan, definisi dasar objek, klasifikasi umum, serta batasan pengamatan yang diamati.</li>
+                                <li><strong>2. Deskripsi Bagian:</strong> Memaparkan rincian detail mengenai objek pengamatan, seperti ciri-ciri fisik, morfologi, habitat, bagian-bagian utama, serta sifat khas objek secara analitis.</li>
+                                <li><strong>3. Deskripsi Manfaat / Simpulan:</strong> Menyajikan manfaat, kegunaan, peran ekologis, serta nilai penting objek yang diamati bagi manusia dan lingkungan sekitar.</li>
+                            </ul>
+                        </div>
+
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-slate-900 text-sm">III. Ciri Kebahasaan Teks LHO</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs">
+                                <div class="p-3 bg-white border border-slate-200 rounded-xl">
+                                    <strong>Nomina & Verba Relasional:</strong> Menggunakan kata benda spesifik serta kata kerja penghubung (adalah, merupakan, yaitu, terbagi atas).
+                                </div>
+                                <div class="p-3 bg-white border border-slate-200 rounded-xl">
+                                    <strong>Istilah Ilmiah/Teknis:</strong> Istilah spesifik bidang ilmu (misal: <em>organik, anorganik, biopori, kompos, daur ulang</em>).
+                                </div>
+                                <div class="p-3 bg-white border border-slate-200 rounded-xl">
+                                    <strong>Kalimat Definisi & Deskripsi:</strong> Kalimat yang memberikan pengertian pasti serta kalimat yang menggambarkan sifat fisik objek secara detail.
+                                </div>
+                                <div class="p-3 bg-white border border-slate-200 rounded-xl">
+                                    <strong>Objektivitas Bebas Emosi:</strong> Menggunakan data angka/fakta kuantitatif dan menghindari frasa emotif/opini.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <h4 class="font-bold text-slate-900 text-sm flex items-center gap-2">
+                                <i class="fa-solid fa-seedling text-brand-600"></i> Studi Kasus Observasi Siswa Tzu Chi:
+                            </h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                <em>"Pengamatan Sistem Pengelolaan Kebersihan, Pemilahan Sampah Daur Ulang, dan Taman Eco-Enzyme di Sekolah Cinta Kasih Tzu Chi Cengkareng."</em><br>
+                                Hasil pengamatan menunjukkan bahwa penerapan budaya 3R (Reduce, Reuse, Recycle) dan depo pelestarian lingkungan Tzu Chi terbukti mengurangi volume sampah sekolah secara signifikan setiap bulannya.
+                            </p>
+                        </div>
+                    </div>
+                `
+            },
+            2: {
+                badge: 'Materi 2 — Teks Biografi',
+                title: 'MATERI 2: TEKS BIOGRAFI TOKOH INSPIRATIF',
+                content: `
+                    <div class="space-y-4">
+                        <div class="p-4 bg-brand-50 rounded-xl border border-brand-200 text-brand-900">
+                            <h4 class="font-bold text-base mb-1">I. Hakikat & Karakteristik Teks Biografi</h4>
+                            <p>Teks Biografi adalah karya tulis naratif non-fiksi yang mengisahkan riwayat perjalanan hidup seorang tokoh penting secara kronologis. Teks ini menggambarkan latar belakang kelahiran, masa muda, tantangan besar yang dihadapi, hingga pencapaian monumental dan nilai-nilai keteladanan yang patut diwarisi oleh pembaca.</p>
+                        </div>
+
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-slate-900 text-sm">II. Struktur Teks Biografi</h4>
+                            <ul class="list-disc pl-5 space-y-2 text-xs text-slate-700">
+                                <li><strong>1. Orientasi (Pengenalan Tokoh):</strong> Menjelaskan latar belakang identitas tokoh, nama lengkap, tempat dan tanggal lahir, latar belakang keluarga, serta latar pendidikan awal.</li>
+                                <li><strong>2. Peristiwa dan Masalah (Kisah Perjuangan):</strong> Rangkaian kronologis peristiwa penting, konflik, rintangan hidup, kerja keras, titik balik kejayaan, dan kontribusi terbesar tokoh bagi masyarakat/dunia.</li>
+                                <li><strong>3. Reorientasi (Penutup & Pandangan Penulis):</strong> Kesimpulan, simpulan evaluatif, serta refleksi pesan moral mengenai nilai keteladanan tokoh yang menginspirasi.</li>
+                            </ul>
+                        </div>
+
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-slate-900 text-sm">III. Kaidah Kebahasaan Teks Biografi</h4>
+                            <p class="text-xs text-slate-700">
+                                Menggunakan pronomina persona ketiga (ia, beliau, dia), kata kerja tindakan (mendirikan, memperjuangkan, memimpin), kata sifat pembangun karakter (kreatif, dermawan, pantang menyerah), serta kata hubung temporal untuk mengurutkan kejadian (kemudian, setelah itu, sejak tahun...).
+                            </p>
+                        </div>
+
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <h4 class="font-bold text-slate-900 text-sm flex items-center gap-2">
+                                <i class="fa-solid fa-heart-handshake text-brand-600"></i> Studi Kasus Biografi Inspiratif:
+                            </h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                <strong>Biografi Master Cheng Yen (Pendiri Yayasan Kemanusiaan Tzu Chi):</strong><br>
+                                Mengisahkan ikrar tekad beliau dari seorang biarawati sederhana hingga membangun gerakan kemanusiaan internasional yang menaungi bidang Relief Bencana, Kedokteran, Pendidikan Karakter, dan Pelestarian Lingkungan di seluruh dunia.
+                            </p>
+                        </div>
+                    </div>
+                `
+            },
+            3: {
+                badge: 'Materi 3 — Puisi',
+                title: 'MATERI 3: PUISI & ANTOLOGI KARYA SASTRA',
+                content: `
+                    <div class="space-y-4">
+                        <div class="p-4 bg-brand-50 rounded-xl border border-brand-200 text-brand-900">
+                            <h4 class="font-bold text-base mb-1">I. Pengertian & Estetika Puisi Baru</h4>
+                            <p>Puisi adalah bentuk karya sastra ekspresif yang padat, terikat oleh irama, rima, ritme, serta penyusunan bait dan larik. Puisi mengolah keindahan diksi dan majas untuk menyampaikan gejolak rasa, pandangan hidup, serta renungan batin penyair kepada pembaca.</p>
+                        </div>
+
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-slate-900 text-sm">II. Unsur Pembangun Puisi (Fisik & Batin)</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-2">
+                                <div class="p-3.5 bg-white border border-slate-200 rounded-xl space-y-1">
+                                    <h5 class="font-bold text-brand-700 text-xs">1. Unsur Fisik Puisi:</h5>
+                                    <ul class="list-disc pl-4 text-[11px] text-slate-600 space-y-1">
+                                        <li><strong>Diksi:</strong> Pemilihan kata yang bernas, konotatif, dan puitis.</li>
+                                        <li><strong>Majas:</strong> Gaya bahasa (Personifikasi, Metafora, Hiperbola).</li>
+                                        <li><strong>Tipografi:</strong> Tata wajah susunan larik dan bait puisi.</li>
+                                        <li><strong>Rima & Irama:</strong> Persamaan bunyi huruf di akhir larik.</li>
+                                    </ul>
+                                </div>
+                                <div class="p-3.5 bg-white border border-slate-200 rounded-xl space-y-1">
+                                    <h5 class="font-bold text-brand-700 text-xs">2. Unsur Batin Puisi:</h5>
+                                    <ul class="list-disc pl-4 text-[11px] text-slate-600 space-y-1">
+                                        <li><strong>Tema (Sense):</strong> Gagasan pokok atau ide utama puisi.</li>
+                                        <li><strong>Rasa (Feeling):</strong> Sikap emosional penyair terhadap subjek.</li>
+                                        <li><strong>Nada (Tone):</strong> Suasana puitis yang dibangun untuk pembaca.</li>
+                                        <li><strong>Amanat (Pesan):</strong> Pesan moral/kebajikan yang disampaikan.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-5 bg-gradient-to-br from-sky-50 to-brand-50 rounded-2xl border border-brand-200 space-y-3 font-serif">
+                            <h4 class="font-bold text-brand-900 text-sm font-sans flex items-center gap-2">
+                                <i class="fa-solid fa-feather text-brand-600"></i> Naskah Puisi Original Karya Abrielle Kayla Budiman:
+                            </h4>
+                            <div class="italic text-slate-800 text-xs leading-relaxed border-l-2 border-brand-400 pl-4 space-y-2">
+                                <p>
+                                    <strong>"Jejak Langkah Cinta Kasih"</strong><br><br>
+                                    Di bawah naungan langit Tzu Chi yang teduh,<br>
+                                    Jemari kita menganyam kasih yang tak lekang oleh waktu.<br>
+                                    Setiap helai kebaikan adalah benih lentera,<br>
+                                    Menerangi jiwa, menghapus duka dunia.<br><br>
+                                    Bukan tentang seberapa besar harta yang ditabungkan,<br>
+                                    Namun seberapa tulus uluran tangan yang diulurkan.<br>
+                                    Bersyukur dalam langkah, menghormati dalam karya,<br>
+                                    Menyemaikan empati di bumi Indonesia.
+                                </p>
+                            </div>
+                            <p class="text-[11px] font-sans font-bold text-brand-700 pt-1">— Karya Abrielle (SMA Cinta Kasih Tzu Chi)</p>
+                        </div>
+                    </div>
+                `
+            },
+            4: {
+                badge: 'Materi 4 — Teks Eksposisi',
+                title: 'MATERI 4: TEKS EKSPOSISI ARGUMENTATIF',
+                content: `
+                    <div class="space-y-4">
+                        <div class="p-4 bg-brand-50 rounded-xl border border-brand-200 text-brand-900">
+                            <h4 class="font-bold text-base mb-1">I. Pengertian & Tujuan Teks Eksposisi</h4>
+                            <p>Teks Eksposisi adalah karangan ilmiah non-fiksi yang bertujuan memaparkan, menjelaskan, dan menyampaikan informasi ilmiah serta gagasan argumentatif penulis secara padat, jelas, dan akurat berdasarkan bukti-bukti faktual pendukung.</p>
+                        </div>
+
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-slate-900 text-sm">II. Struktur Komprehensif Teks Eksposisi</h4>
+                            <ul class="list-disc pl-5 space-y-2 text-xs text-slate-700">
+                                <li><strong>1. Tesis (Pernyataan Pendapat):</strong> Bagian pembuka yang memuat sudut pandang utama, pendirian, atau hipotesis penulis mengenai isu hangat yang dibahas.</li>
+                                <li><strong>2. Rangkaian Argumen:</strong> Alasan-alasan ilmiah pendukung tesis berupa data statistik, fakta lapangan, hasil riset ilmiah, serta kutipan pendapat ahli yang logis.</li>
+                                <li><strong>3. Penegasan Ulang (Simpulan):</strong> Bagian penutup yang mempertegas kembali posisi tesis secara ringkas dan memberikan rekomendasi/solusi atas isu yang diangkat.</li>
+                            </ul>
+                        </div>
+
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-slate-900 text-sm">III. Ciri Kebahasaan Teks Eksposisi</h4>
+                            <p class="text-xs text-slate-700">
+                                Menggunakan konjungsi kausalitas (sebab, karena, akibatnya), kata-kata teknis bidang ilmiah (edukasi, karakter, AI, digitalisasi), leksikal nomina dan verba transitif, serta ungkapan persuasif faktual.
+                            </p>
+                        </div>
+
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <h4 class="font-bold text-slate-900 text-sm flex items-center gap-2">
+                                <i class="fa-solid fa-lightbulb text-brand-600"></i> Contoh Esai Eksposisi Siswa:
+                            </h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                <strong>"Pentingnya Integrasi Budaya Humanis & Karakter di Era Transformasi AI":</strong><br>
+                                Tesis menegaskan bahwa penguasaan teknologi digital tanpa diimbangi oleh fondasi moral dan empati budaya humanis akan melahirkan generasi cerdas yang kehilangan nurani kemanusiaan.
+                            </p>
+                        </div>
+                    </div>
+                `
+            },
+            5: {
+                badge: 'Materi 5 — Teks Hikayat',
+                title: 'MATERI 5: TEKS HIKAYAT (SASTRA MELAYU KLASIK)',
+                content: `
+                    <div class="space-y-4">
+                        <div class="p-4 bg-brand-50 rounded-xl border border-brand-200 text-brand-900">
+                            <h4 class="font-bold text-base mb-1">I. Pengertian & Hakikat Sastra Hikayat</h4>
+                            <p>Hikayat adalah salah satu bentuk karya sastra Melayu Klasik berbentuk prosa naratif tradisional yang mengisahkan tentang kehebatan raja-raja, kesaktian para pahlawan, pertempuran antar kerajaaan, serta peristiwa ajaib yang penuh dengan unsur supranatural dan pesan moral mulia.</p>
+                        </div>
+
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-slate-900 text-sm">II. Karakteristik Khas Hikayat</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs">
+                                <div class="p-3 bg-white border border-slate-200 rounded-xl">
+                                    <strong>Istana Sentris:</strong> Berpusat pada latar kehidupan keluarga raja, bangsawan, dan dinamika istana.
+                                </div>
+                                <div class="p-3 bg-white border border-slate-200 rounded-xl">
+                                    <strong>Anonim:</strong> Pengarang asli umumnya tidak tercantum karena diturunkan melalui tradisi lisan secara turun-temurun.
+                                </div>
+                                <div class="p-3 bg-white border border-slate-200 rounded-xl">
+                                    <strong>Kemukjizatan / Kesaktian:</strong> Menampilkan peristiwa spektakuler di luar nalar akal sehat manusia (tokoh sakti, pedang pusaka).
+                                </div>
+                                <div class="p-3 bg-white border border-slate-200 rounded-xl">
+                                    <strong>Bahasa Arkaik Klise:</strong> Menggunakan kosakata bahasa Melayu Kuno seperti <em>Alkisah, Syahdan, Hatta, Sebermula, Maka, Niscaya</em>.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <h4 class="font-bold text-slate-900 text-sm flex items-center gap-2">
+                                <i class="fa-solid fa-scroll text-brand-600"></i> Analisis Nilai Kehidupan Hikayat:
+                            </h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Melalui analisis <strong>"Hikayat Hang Tuah"</strong>, siswa mempelajari nilai kesetiaan, keberanian membela tanah air, serta etika penghormatan terhadap pemimpin yang tetap relevan jika ditransformasikan ke dalam konteks kepemimpinan modern.
+                            </p>
+                        </div>
+                    </div>
+                `
+            },
+            6: {
+                badge: 'Materi 6 — Cerpen',
+                title: 'MATERI 6: CERPEN (CERITA PENDEK)',
+                content: `
+                    <div class="space-y-4">
+                        <div class="p-4 bg-brand-50 rounded-xl border border-brand-200 text-brand-900">
+                            <h4 class="font-bold text-base mb-1">I. Hakikat Cerita Pendek (Cerpen)</h4>
+                            <p>Cerpen (Cerita Pendek) adalah karya sastra fiksi berbentuk prosa naratif yang berfokus pada satu konflik tunggal yang dialami oleh tokoh utama secara padat, seru, dan dapat diselesaikan dalam sekali duduk (kurang dari 10.000 kata).</p>
+                        </div>
+
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-slate-900 text-sm">II. Unsur Intrinsik Pembangun Cerpen</h4>
+                            <div class="grid grid-cols-2 gap-2 text-xs">
+                                <div class="p-2.5 bg-white border border-slate-200 rounded-lg"><strong>Tema:</strong> Gagasan inti atau ide utama pendorong cerita.</div>
+                                <div class="p-2.5 bg-white border border-slate-200 rounded-lg"><strong>Tokoh & Penokohan:</strong> Karakter protagonis/antagonis & watak.</div>
+                                <div class="p-2.5 bg-white border border-slate-200 rounded-lg"><strong>Alur (Plot):</strong> Rangkaian peristiwa (Maju, Mundur, Campuran).</div>
+                                <div class="p-2.5 bg-white border border-slate-200 rounded-lg"><strong>Latar (Setting):</strong> Latar Tempat, Waktu, dan Suasana emosional.</div>
+                                <div class="p-2.5 bg-white border border-slate-200 rounded-lg"><strong>Sudut Pandang:</strong> Kacamata pencerita (Orang I "Aku" / Orang III "Beliau").</div>
+                                <div class="p-2.5 bg-white border border-slate-200 rounded-lg"><strong>Amanat:</strong> Pesan moral yang dipetik pembaca.</div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-slate-900 text-sm">III. Tahapan Alur Naratif (Struktur Cerpen)</h4>
+                            <p class="text-xs text-slate-700 bg-slate-100 p-3 rounded-xl border border-slate-200">
+                                <strong>Abstraksi</strong> ➔ <strong>Orientasi</strong> (Pengenalan Tokoh & Latar) ➔ <strong>Komplikasi</strong> (Munculnya Konflik Utama) ➔ <strong>Evaluasi / Klimaks</strong> (Puncak Ketegangan Konflik) ➔ <strong>Resolusi</strong> (Penyelesaian Masalah) ➔ <strong>Koda</strong> (Pesan Penutup).
+                            </p>
+                        </div>
+
+                        <div class="p-4 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2">
+                            <h4 class="font-bold text-slate-900 text-sm flex items-center gap-2">
+                                <i class="fa-solid fa-book-open-reader text-brand-600"></i> Cerpen Original Karya Abrielle:
+                            </h4>
+                            <p class="text-xs text-slate-600 leading-relaxed italic">
+                                <strong>"Lentera di Ujung Senja Tzu Chi"</strong><br>
+                                Mengisahkan perjuangan seorang siswa SMA yang belajar memahami arti sejati dari persahabatan, ketulusan relawan, dan indahnya indahnya sifat saling membantu tanpa memandang perbedaan suku dan latar belakang.
+                            </p>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        function openMateriModal(id) {
+            const data = materiData[id];
+            if (!data) return;
+
+            document.getElementById('modal-badge').innerText = data.badge;
+            document.getElementById('modal-title').innerText = data.title;
+            document.getElementById('modal-content').innerHTML = data.content;
+
+            document.getElementById('materi-modal').classList.remove('hidden');
+        }
+
+        function closeMateriModal() {
+            document.getElementById('materi-modal').classList.add('hidden');
+        }
+
+        function filterMateriCards() {
+            const query = document.getElementById('materi-search-input').value.toLowerCase();
+            const cards = document.querySelectorAll('.materi-card');
+
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                if (text.includes(query)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function quickFilterMateri(category) {
+            const cards = document.querySelectorAll('.materi-card');
+            const chips = document.querySelectorAll('.materi-chip');
+
+            chips.forEach(chip => {
+                chip.classList.remove('active', 'bg-white', 'text-brand-700', 'font-bold');
+                chip.classList.add('bg-white/20', 'text-white');
+            });
+
+            event.target.classList.add('active', 'bg-white', 'text-brand-700', 'font-bold');
+            event.target.classList.remove('bg-white/20', 'text-white');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
